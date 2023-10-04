@@ -4,7 +4,7 @@ public class ArvoreAvl {
 
   protected No raiz;
 
-	public void inserir(int k) {
+	public void inserir(Aluno k) {
 		No n = new No(k);
 		inserirAVL(this.raiz, n);
 	}
@@ -16,7 +16,7 @@ public class ArvoreAvl {
 
 		} else {
 
-			if (aInserir.getChave() < aComparar.getChave()) {
+			if (aInserir.getChave().getMatricula() < aComparar.getChave().getMatricula()) {
 
 				if (aComparar.getEsquerda() == null) {
 					aComparar.setEsquerda(aInserir);
@@ -27,7 +27,7 @@ public class ArvoreAvl {
 					inserirAVL(aComparar.getEsquerda(), aInserir);
 				}
 
-			} else if (aInserir.getChave() > aComparar.getChave()) {
+			} else if (aInserir.getChave().getMatricula() > aComparar.getChave().getMatricula()) {
 
 				if (aComparar.getDireita() == null) {
 					aComparar.setDireita(aInserir);
@@ -84,13 +84,13 @@ public class ArvoreAvl {
 
 		} else {
 
-			if (atual.getChave() > k) {
+			if (atual.getChave().getMatricula() > k) {
 				removerAVL(atual.getEsquerda(), k);
 
-			} else if (atual.getChave() < k) {
+			} else if (atual.getChave().getMatricula() < k) {
 				removerAVL(atual.getDireita(), k);
 
-			} else if (atual.getChave() == k) {
+			} else if (atual.getChave().getMatricula() == k) {
 				removerNoEncontrado(atual);
 			}
 		}

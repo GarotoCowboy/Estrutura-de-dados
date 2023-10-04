@@ -3,24 +3,24 @@ public class No {
 	private No esquerda;
 	private No direita;
 	private No pai;
-	private int chave;
+	private Aluno chave;
 	private int balanceamento;
-
-	public No(int k) {
+	
+	public No(Aluno k) {
 		setEsquerda(setDireita(setPai(null)));
 		setBalanceamento(0);
 		setChave(k);
 	}
 
-	public String toString() {
-		return Integer.toString(getChave());
-	}
+	// public String toString() {
+	// 	return Integer.toString(getChave());
+	// }
 
-	public int getChave() {
+	public Aluno getChave() {
 		return chave;
 	}
 
-	public void setChave(int chave) {
+	public void setChave(Aluno chave) {
 		this.chave = chave;
 	}
 
