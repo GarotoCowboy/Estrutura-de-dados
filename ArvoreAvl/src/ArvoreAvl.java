@@ -2,8 +2,10 @@ import java.util.ArrayList;
 
 public class ArvoreAvl {
 
-  protected No raiz;
-
+  private No raiz;
+	public No getRaiz(){
+		return raiz;
+	}
 	public void inserir(Aluno k) {
 		No n = new No(k);
 		inserirAVL(this.raiz, n);
@@ -261,4 +263,26 @@ public class ArvoreAvl {
 		lista.add(no);
 		inorder(no.getDireita(), lista);
 	}
+
+
+
+	public Aluno buscarPorMatricula(int matricula) {
+    return buscarPorMatriculaRecursivo(this.raiz, matricula);
+}
+
+private Aluno buscarPorMatriculaRecursivo(No atual, int matricula) {
+    if (atual == null) {
+        return null; // Aluno não encontrado na árvore
+    }
+
+    int matriculaAtual = atual.getChave().getMatricula();
+
+    if (matricula == matriculaAtual) {
+        return atual.getChave(); // Aluno encontrado
+    } else if (matricula < matriculaAtual) {
+        return buscarPorMatriculaRecursivo(atual.getEsquerda(), matricula);
+    } else {
+        return buscarPorMatriculaRecursivo(atual.getDireita(), matricula);
+    }
+}
 }

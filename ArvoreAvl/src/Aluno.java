@@ -7,8 +7,13 @@ public class Aluno {
    
    
 
+@Override
+public String toString() {
+    return "Aluno [matricula=" + matricula + ", faltas=" + faltas + ", n1=" + n1 + ", n2=" + n2 + ", n3=" + n3
+            + ", media=" + media + ", nome=" + nome + "]";
+}
 
-public Aluno(int matricula, String nome/** ,int faltas, double n1, double n2, double n3*/) {
+public Aluno(int matricula, String nome,int faltas, double n1, double n2, double n3) {
     this.matricula = matricula;
     this.faltas = faltas;
     this.n1 = n1;
