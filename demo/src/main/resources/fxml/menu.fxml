@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+
+<AnchorPane fx:id="tela" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="265.0" prefWidth="599.0" styleClass="anchorpane" stylesheets="@../styles/style.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.com.projeto.ed.avl.controller.MenuController">
+   <children>
+      <HBox alignment="CENTER" layoutX="5.0" layoutY="65.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="100.0" prefWidth="579.0" styleClass="hbox" AnchorPane.bottomAnchor="65.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="4.0" AnchorPane.topAnchor="65.0">
+         <children>
+            <Button fx:id="btnInserir" mnemonicParsing="false" onAction="#abrirMenuInserir" prefHeight="65.0" prefWidth="132.0" text="Inserir" />
+            <Button fx:id="btnRemover" mnemonicParsing="false" onAction="#abrirMenuRemover" prefHeight="65.0" prefWidth="133.0" text="Remover" />
+            <Button fx:id="btnBuscar" mnemonicParsing="false" onAction="#abrirMenuBuscar" prefHeight="63.0" prefWidth="135.0" text="Buscar" />
+         </children>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+      </HBox>
+   </children>
+</AnchorPane>

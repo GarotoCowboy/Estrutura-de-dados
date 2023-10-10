@@ -1,0 +1,58 @@
+.anchorpane{
+    -fx-background-color: linear-gradient(to bottom, #0d0f36, #69d2cd);
+}
+.anchorpaneMini{
+    -fx-background-color: #294380;
+    -fx-border-radius: 15px;
+    -fx-background-radius: 18px;
+    -fx-alignment: center;
+    
+}
+.label{
+    -fx-text-fill: white;
+}
+.hbox{
+    -fx-spacing: 15px;
+}
+.button{
+    -fx-alignment: center;
+    -fx-border-radius: 20px;
+    -fx-background-radius: 18px;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.8),10,0.3,4,4);
+    -fx-background-color: #b9f1d6;
+    -fx-text-fill: #0d0f36;
+    -fx-background-radius: 18px;
+    -fx-animated: -fx-background-color 0.8s;
+    -fx-min-height: 80px;
+    -fx-max-height: 80px;
+    -fx-min-width: 90px;
+    -fx-max-width: 90px;
+}
+.button:hover{
+    -fx-scale-x: 0.8;
+    -fx-scale-y: 0.8;
+    -fx-opacity: 0.8;
+    -fx-text-fill: #7c8071;
+    -fx-background-color:#f1f6ce;
+    -fx-cursor: hand;
+}
+.textfield{
+    -fx-background-color:#f1f6ce;
+    -fx-background-radius: 10px 4px 20px 5px;
+}
+.vbox{
+    -fx-alignment: center;
+    -fx-spacing: 10px;
+    
+}
+.pane{
+    -fx-background-color: black;
+    -fx-background-radius: 15px;
+}
+.tableview{
+    -fx-background-color: linear-gradient(to bottom, #3c408b, #2473eb);
+    -fx-font-family: Arial;
+    -fx-text-fill: white;
+    -fx-font-size: 14;
+    
+}
