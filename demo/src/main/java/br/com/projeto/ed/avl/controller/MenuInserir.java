@@ -87,8 +87,8 @@ public class MenuInserir {
 
      @FXML
     private AnchorPane tela;
-
-   public static String arquivo = "demo\\src\\main\\java\\br\\com\\projeto\\ed\\avl\\dados\\entrada.txt";
+    //ADICIONAR O SEU DIRETORIO REFERENTE AO ENTRADA.TXT AQUI!!!!!!!!
+   public static String arquivo = "demo\\src\\main\\resources\\entrada.txt";
       public static  ArvoreAvl avl = new ArvoreAvl();
 
     @FXML

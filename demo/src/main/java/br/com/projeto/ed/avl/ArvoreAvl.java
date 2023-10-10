@@ -9,7 +9,10 @@ import java.util.ArrayList;
 public class ArvoreAvl {
 
 	private No raiz;
-
+	//MUDAR DIRETORIO AQUI, COLOCAR DIRETORIO DO ENTRADA.TXT!!!!
+	private String diretorioEntrada ="demo\\src\\main\\resources\\entrada.txt";
+	//MUDAR DIRETORIO AQUI, COLOCAR DIRETORIO DO SAIDA.TXT!!!
+	private String diretorioSaida ="demo\\src\\main\\resources\\saida.txt";
 	public No getRaiz() {
 		return raiz;
 	}
@@ -296,8 +299,8 @@ public class ArvoreAvl {
 
         try {
 			//abre os arquivos
-            BufferedReader leitorSaida = new BufferedReader(new FileReader("demo\\src\\main\\java\\br\\com\\projeto\\ed\\avl\\dados\\saida.txt"));
-            BufferedWriter escritorEntrada = new BufferedWriter(new FileWriter("demo\\src\\main\\java\\br\\com\\projeto\\ed\\avl\\dados\\entrada.txt"));
+            BufferedReader leitorSaida = new BufferedReader(new FileReader(diretorioSaida));
+            BufferedWriter escritorEntrada = new BufferedWriter(new FileWriter(diretorioEntrada));
             String linha;
             while ((linha = leitorSaida.readLine()) != null) {
                 escritorEntrada.write(linha);
@@ -317,7 +320,7 @@ public class ArvoreAvl {
 	public void escreverEmArquivoSaida() {
 		ArrayList<No> listaOrdenada = inorder();
 
-		try (BufferedWriter leitorSaida = new BufferedWriter(new FileWriter("demo\\src\\main\\java\\br\\com\\projeto\\ed\\avl\\dados\\saida.txt"))) { 
+		try (BufferedWriter leitorSaida = new BufferedWriter(new FileWriter(diretorioSaida))) { 
 			for (No no : listaOrdenada) {
 				Aluno aluno = no.getChave();
 				leitorSaida.write(aluno.getMatricula() + ","+ aluno.getNome() + "," +
